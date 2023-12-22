@@ -1,0 +1,116 @@
+:root {
+  --primary-color: rgb(12, 172, 234);
+  --secondary-color: #186ebe;
+  --color-white: #fff;
+  --color-light: #f7f9fc;
+  --color-grey: #adbdcc;
+  --text-dark: #000;
+  --text-semi-dark: #727272;
+
+  --body-font: "Anek Telugu", "sans-serif";
+  --heading-font: "Roboto", "sans-serif";
+
+  --h1-font-size: 82px;
+  --h1-line-height: 96px;
+  --h2-font-size: 36px;
+  --h2-line-height: 48px;
+  --h3-font-size: 28px;
+  --h4-font-size: 24px;
+  --h5-font-size: 20px;
+  --h6-font-size: 16px;
+  --p-font-size: 18px;
+  --p-line-height: 24px;
+  --button-font-size: 16px;
+
+  /* SPACING */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 32px;
+  --space-xl: 64px;
+}
+
+body {
+  width: 100%;
+  font-family: var(--body-font);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--color-white);
+}
+
+p {
+  font-family: var(--body-font);
+  line-height: var(--p-line-height);
+  margin: var(--space-md) 0;
+  font-weight: 500;
+}
+
+h1 {
+  font-family: var(--heading-font);
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  font-weight: 600;
+  letter-spacing: -1px;
+  margin: 0;
+  width: 100%;
+}
+h2 {
+  font-family: var(--heading-font);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+}
+
+h3 {
+  font-family: var(--heading-font);
+  font-size: var(--h3-font-size);
+  line-height: var(--h3-line-height);
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
+h4 {
+  font-family: var(--heading-font);
+  font-size: var(--h4-font-size);
+  line-height: var(--h4-line-height);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+}
+
+h5 {
+  font-family: var(--heading-font);
+  font-size: var(--h5-font-size);
+  line-height: var(--h5-line-height);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+}
+
+h6 {
+  font-family: var(--heading-font);
+  font-size: var(--h6-font-size);
+  line-height: var(--h6-line-height);
+  font-weight: 500;
+  margin: 0;
+  width: 100%;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+button {
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  border: none;
+  padding: var(--space-sm) var(--space-md);
+}
