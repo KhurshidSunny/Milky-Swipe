@@ -1,11 +1,12 @@
 :root {
-  --primary-color: rgb(12, 172, 234);
-  --secondary-color: #186ebe;
+  --primary-color: #186ebe;
+  --secondary-color: rgb(12, 172, 234);
   --color-white: #fff;
   --color-light: #f7f9fc;
   --color-grey: #adbdcc;
   --text-dark: #000;
   --text-semi-dark: #727272;
+  --text-secondary: #d4d4d4;
 
   --body-font: "Anek Telugu", "sans-serif";
   --heading-font: "Roboto", "sans-serif";
@@ -14,9 +15,9 @@
   --h1-line-height: 96px;
   --h2-font-size: 36px;
   --h2-line-height: 48px;
-  --h3-font-size: 28px;
-  --h4-font-size: 24px;
-  --h5-font-size: 20px;
+  --h3-font-size: 32px;
+  --h4-font-size: 20px;
+  --h5-font-size: 18px;
   --h6-font-size: 16px;
   --p-font-size: 18px;
   --p-line-height: 24px;
@@ -36,13 +37,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--color-white);
-}
-
-p {
-  font-family: var(--body-font);
-  line-height: var(--p-line-height);
-  margin: var(--space-md) 0;
-  font-weight: 500;
 }
 
 h1 {
@@ -99,18 +93,139 @@ h6 {
   width: 100%;
 }
 
+p {
+  font-family: var(--body-font);
+  line-height: var(--p-line-height);
+  margin: var(--space-md) 0;
+  font-weight: 500;
+}
+
 a {
   color: var(--color-white);
   text-decoration: none;
   font-weight: 500;
+  color: var(--text-dark);
 }
 
 a:hover {
   color: var(--primary-color);
 }
 button {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   color: var(--color-white);
   border: none;
-  padding: var(--space-sm) var(--space-md);
+  text-transform: uppercase;
+  background-color: var(--primary-color);
+  padding: calc(var(--space-md) - 2px) calc(var(--space-lg) + 10px);
+}
+
+/* LAYOUT STYLES */
+
+.section-space {
+  padding: 0 calc(var(--space-xl) + 20px);
+}
+
+.card-container {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: var(--space-lg) calc(var(--space-xl) + 20px);
+  display: flex;
+  box-sizing: border-box;
+}
+
+.card-container .card {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg) 0;
+}
+
+.card-container .card h3 {
+  text-align: center;
+  margin: var(--space-lg) 0 var(--space-md) 0;
+  transition: all 0.15s ease-in;
+}
+
+.card-container .card h3:hover {
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+.card-container .card p {
+  width: 80%;
+  text-align: center;
+  color: var(--text-semi-dark);
+  margin: 0 0 var(--space-lg) 0;
+}
+
+.card-container .card img {
+  width: 330px;
+  height: 200px;
+}
+
+.about-us .about-us-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-us-grid .grid-left img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-us .about-us-grid .grid-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--space-xl) + 20px) var(--space-xl);
+
+  background-color: rgb(90, 138, 172);
+}
+
+.about-us-grid .grid-right h3 {
+  text-align: center;
+  color: var(--color-light);
+  margin: 0 0 var(--space-md) 0;
+}
+.about-us-grid .grid-right p {
+  text-align: center;
+  color: var(--text-secondary);
+}
+.about-us-grid .grid-right button {
+  margin: var(--space-lg) 0 0 0;
+}
+
+/* NAVBAR STYLES */
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: var(--color-white);
+  padding: var(--space-sm) 0;
+  display: flex;
+  align-items: center;
+}
+
+#navbar-logo {
+  height: 70px;
+  margin: 0 var(--space-sm) 0 var(--space-lg);
+}
+
+.navbar .menu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .menu li {
+  list-style-type: none;
+}
+
+.navbar .menu li a {
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: 500;
 }
