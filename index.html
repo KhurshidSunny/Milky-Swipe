@@ -7,6 +7,12 @@
 
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Add this line inside the <head> tag of your HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -57,7 +63,7 @@
         <h2 class="heading-underline">production</h2>
         <div class="card-container">
           <div class="card">
-            <img src="assests/production1.webp" alt="" />
+            <img class="production-image" src="assests/production1.webp" alt="" />
 
             <h3>Labortary</h3>
             <p>An ancient Chinese Provers explains the importance o...</p>
@@ -65,7 +71,7 @@
           </div>
 
           <div class="card">
-            <img src="assests/production2.webp" alt="" />
+            <img class="production-image" src="assests/production2.webp" alt="" />
 
             <h3>Production Units</h3>
             <p>Our Production Lines in O...</p>
@@ -73,7 +79,7 @@
           </div>
 
           <div class="card">
-            <img src="assests/production3.webp" alt="" />
+            <img class="production-image" src="assests/production3.webp" alt="" />
 
             <h3>Science and Technology</h3>
             <p>Technology is defined as "the sys...</p>
@@ -125,12 +131,12 @@
 
           <div class="card">
             <img id="product-image" src="assests/bori.webp" alt="product 1" />
-            <h5>%35 WPC Whey Protein Powder</h5>
+            <h5>%50 Demineralized Whey Powder</h5>
           </div>
 
           <div class="card">
             <img id="product-image" src="assests/bori.webp" alt="product 1" />
-            <h5>%35 WPC Whey Protein Powder</h5>
+            <h5>%70 Demineralized Whey Powder</h5>
           </div>
 
           <div class="card">
@@ -139,11 +145,108 @@
               src="assests/last part.webp"
               alt="product 1"
             />
-            <h5>%35 WPC Whey Protein Powder</h5>
+            <h5>%90 Demineralized Whey Powder</h5>
           </div>
         </div>
         <button>see all</button>
       </div>
+
+      <div class="scientific-section">
+        <div class="scientific-grid section-space">
+          <div class="col-left">
+            <img src="assests/about_us.webp" alt="" />
+          </div>
+          <div class="col-right">
+            <h2>Science And Technology</h2>
+            <p>
+              Science And Technology . The relationship between science and
+              technology is more important for our company that produces food
+              products. While scientific studies lead to technological
+              development by producing information suitable for application,
+              technological developments accelerate scientific development by
+              enabling scientific research to be carried out under more
+              favorable conditions.
+            </p>
+            <button>read more</button>
+          </div>
+        </div>
+      </div>
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-grid">
+        <!-- socials -->
+        <div class="col">
+          <img id="footer-logo" src="assests/logo.webp" alt="footer-logo" />
+          <div class="socials-links">
+            <a href="#"><i class="fab fa-facebook"></i>
+            </i></a>
+            <a href="#"><i class="fab fa-youtube"></i>
+            </i></a>
+            <a href="#"><i class="fab fa-instagram"></i>
+            </i></a>
+            <a href="#"><i class="fab fa-linkedin"></i>
+            </i></a>
+          </div>
+        </div>
+
+        <!-- institutional -->
+        <div class="col">
+          <h5>Institutional</h5>
+          <ul class="links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Exportation</a></li>
+            <li><a href="#">Our Ethical Values</a></li>
+            <li><a href="#">Departments</a></li>
+            <li><a href="#">PDPA</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+         <!-- production -->
+         <div class="col">
+          <h5>Production</h5>
+          <ul class="links">
+            <li><a href="#">Science And Technology</a></li>
+            <li><a href="#">Production Units</a></li>
+            <li><a href="#">Laboratory</a></li>
+            <li><a href="#">Quality</a></li>
+          </ul>
+        </div>
+
+         <!-- Career -->
+         <div class="col">
+          <h5>Career</h5>
+          <ul class="links">
+            <li><a href="#">Open Positions</a></li>
+            <li><a href="#">Staff Training</a></li>
+            <li><a href="#">Career Planning</a></li>
+            <li><a href="#">Recruitment Process</a></li>
+            <li><a href="#">Human Resources Policy</a></li>
+          </ul>
+        </div>
+
+            <!-- Products -->
+       <div class="col">
+        <h5>Products</h5>
+        <ul class="links">
+          <li><a href="#">%35 WPC Whey Protein Powder</a></li>
+          <li><a href="#">%50 Demineralized Whey Powder</a></li>
+          <li><a href="#">%70 Demineralized Whey Powder</a></li>
+          <li><a href="#">%90 Demineralized Whey Powder</a></li>
+          <li><a href="#">Whey Permeat Powder
+            Whey Powder</a></li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="copyright">
+        <p>Copyright © 2022 Milky Royal | Milk Powder and Whey Powder | Aydın | All Rights Reserved.</p>
+        <span>^</span>
+      </div>
+   
+    </footer>
   </body>
 </html>
