@@ -55,6 +55,18 @@ h2 {
   font-weight: 500;
   margin: 0;
   width: 100%;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  width: 120px;
+  height: 1px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 h3 {
@@ -164,19 +176,22 @@ button {
   text-align: center;
   color: var(--text-semi-dark);
   margin: 0 0 var(--space-lg) 0;
+  flex-grow: 1;
 }
 
-.about-us .about-us-grid {
+/* two coloumns layout */
+
+.two-columns .two-columns-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
-.about-us-grid .grid-left img {
+.two-columns-grid .grid-left img {
   width: 100%;
   height: 100%;
 }
 
-.about-us .about-us-grid .grid-right {
+.two-columns .two-columns-grid .grid-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -186,16 +201,16 @@ button {
   background-color: rgb(90, 138, 172);
 }
 
-.about-us-grid .grid-right h3 {
+.two-columns-grid .grid-right h3 {
   text-align: center;
   color: var(--color-light);
   margin: 0 0 var(--space-md) 0;
 }
-.about-us-grid .grid-right p {
+.two-columns-grid .grid-right p {
   text-align: center;
   color: var(--text-secondary);
 }
-.about-us-grid .grid-right button {
+.two-columns-grid .grid-right button {
   margin: var(--space-lg) 0 0 0;
 }
 
@@ -246,7 +261,6 @@ button {
   justify-content: center;
   align-items: center;
   background-image: url("assests/background1.webp");
-  /* height: 100vh; */
   height: 800px;
 }
 
@@ -304,19 +318,61 @@ button {
   transform: translateX(-50%);
 }
 
+/* PRODUCTION SECTION */
+
 .production-section h2 {
   text-align: center;
   margin: var(--space-lg) 0;
   position: relative;
 }
 
-.production-section h2::before {
-  content: "";
-  width: 120px;
-  height: 1px;
+/* PRODUCTS SECTION */
+.products-section {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.products-section button {
+  margin: calc(var(--space-xl) + 20px) 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.products-section button:hover {
   background-color: var(--secondary-color);
-  position: absolute;
-  bottom: -18px;
-  left: 50%;
-  transform: translateX(-50%);
+}
+
+.products-section .card-container {
+  width: 100%;
+  padding: 0;
+}
+
+.products-section .card-container .card {
+  width: 25%;
+}
+.products-section h2 {
+  text-align: center;
+  margin: calc(var(--space-xl) * 2) 0 var(--space-md) 0;
+}
+
+.products-section .card h5 {
+  text-align: center;
+  font-size: 20px;
+  width: 60%;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: all 0.2s ease-in;
+}
+
+.products-section .card h5:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+#product-image {
+  width: 180px;
+  height: 190px;
+  margin: var(--space-lg);
 }
