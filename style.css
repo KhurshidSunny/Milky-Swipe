@@ -37,6 +37,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   background-color: var(--color-white);
+  /* max-width: 1100px; */
 }
 
 h1 {
@@ -142,6 +143,7 @@ button {
   background-color: var(--color-white);
   padding: var(--space-lg) calc(var(--space-xl) + 20px);
   display: flex;
+  gap: 20px;
   box-sizing: border-box;
 }
 
@@ -152,12 +154,6 @@ button {
   align-items: center;
   justify-content: center;
   padding: var(--space-lg) 0;
-  box-sizing: border-box;
-}
-
-.card .card-image {
-  width: 330px;
-  height: 220px;
 }
 
 .card-container .card .card-image img {
@@ -220,6 +216,7 @@ button {
 
 /* MAIN */
 .main {
+  width: 100%;
 }
 
 /* NAVBAR STYLES */
@@ -395,9 +392,14 @@ button {
   text-align: center;
   margin: var(--space-lg) 0;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .production-section .card .card-image {
   position: relative;
+  width: 100%;
+  max-width: 330px;
+  height: auto;
 }
 
 .production-section .card .card-image img {
@@ -433,6 +435,26 @@ button {
   background-color: var(--color-white);
 }
 
+.card-container .card button {
+  transition: button 0.3s ease;
+}
+
+.production-section .card-container .card button:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/* ABOUT US SECTION */
+.about-us-section h2 {
+  text-align: center;
+  margin: var(--space-lg) 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.two-columns {
+  margin: calc(var(--space-xl) + 20px) 0 0 0;
+}
 /* PRODUCTS SECTION */
 .products-section {
   width: 100%;
@@ -551,7 +573,8 @@ button {
 /* FOOTER STYLES */
 .footer {
   width: 100%;
-  height: 400px;
+  height: 500px;
+  max-height: 600px;
   background-color: #231f20;
 }
 #footer-logo {
@@ -660,4 +683,217 @@ button {
 
 .copyright span:hover::before {
   opacity: 1;
+}
+
+/* BREAKPOINTS */
+
+@media only screen and (max-width: 1160px) {
+  /* SCIENTIFIC SECTION */
+  .scientific-grid .col-left img {
+    width: 360px;
+  }
+
+  .scientific-grid .col-right {
+    width: 50%;
+    padding: var(--space-md) var(--space-sm);
+    margin: 0 0 0 var(--space-md);
+  }
+
+  .scientific-grid .col-right h2 {
+    margin: var(--space-lg) 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  :root {
+    --h1-font-size: 72px;
+    --h1-line-height: 85px;
+    --h2-font-size: 48px;
+    --h2-line-height: 65px;
+    --h3-font-size: 32px;
+    --h4-font-size: 28px;
+    --h5-font-size: 24px;
+  }
+
+  body {
+    width: 100%;
+  }
+
+  /* SCIENTIFIC SECTION */
+  .scientific-grid .col-left img {
+    width: 260px;
+  }
+
+  .scientific-grid .col-right {
+    width: 50%;
+    padding: var(--space-md) var(--space-sm);
+    margin: 0 0 0 var(--space-md);
+  }
+
+  .scientific-grid .col-right h2 {
+    margin: var(--space-lg) 0 0 0;
+  }
+}
+
+/* TABLET BREAKPOINT */
+@media only screen and (max-width: 768px) {
+  :root {
+    --h1-font-size: 60px;
+    --h1-line-height: 72px;
+    --h2-font-size: 37px;
+    --h2-line-height: 52px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+    --h5-font-size: 16px;
+  }
+
+  /* NAVBAR STYLES */
+  .navbar {
+  }
+
+  /* GRAPHIC SECTION */
+  .graphic-images {
+    position: relative;
+    width: 100%;
+    height: 500px;
+  }
+
+  #milk {
+    width: 100%;
+    height: 100%;
+  }
+
+  #graphic-logo {
+    width: 250px;
+    top: -100px;
+  }
+
+  /* PRODUCTION SECTION */
+  .production-section .card-container .card button {
+    padding: var(--space-sm) var(--space-lg);
+  }
+
+  /* ABOUT US SECTION */
+  .two-columns .two-columns-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .products-section .card h5 {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  #product-image {
+    width: 150px;
+    height: 160px;
+  }
+
+  /* FOOTER */
+
+  .footer-grid {
+    padding: var(--space-lg) calc(var(--space-md) + 20px) 0 var(--space-lg);
+  }
+  #footer-logo {
+    width: 120px;
+  }
+
+  .col .socials-links {
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    margin: var(--space-md) 0 0 0;
+  }
+
+  .socials-links i {
+    color: var(--secondary-color);
+    font-size: 25px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+}
+
+/* MOBILE BREAKPOINT */
+@media only screen and (max-width: 550px) {
+  :root {
+    --h1-font-size: 48px;
+    --h1-line-height: 62px;
+    --h2-font-size: 32px;
+    --h2-line-height: 45px;
+    --h3-font-size: 24px;
+    --h4-font-size: 20px;
+    --h5-font-size: 16px;
+  }
+
+  /* PRODUCTION SECTION */
+  .card-container {
+    flex-direction: column;
+  }
+  .card-container .card {
+    width: 100%;
+  }
+
+  /* PRODUCTS */
+  .products-section .card-container .card {
+    width: 100%;
+  }
+
+  /* .products-section button {
+    margin: var(--space-md) 0;
+  } */
+
+  /* SCIENTIFIC SECTION */
+  .scientific-grid {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scientific-grid .col-left {
+    width: 100%;
+    text-align: center;
+  }
+
+  .scientific-grid .col-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scientific-grid .col-right h2 {
+    margin: 0;
+    text-align: center;
+  }
+  .scientific-grid .col-left img {
+    width: 180px;
+  }
+
+  .scientific-grid .col-right button {
+    margin: var(--space-md) 0;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    width: 100%;
+    height: 800px;
+    max-height: 900px;
+    background-color: #231f20;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-grid .col:nth-child(1) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: center;
+    margin: 0 0 var(--space-lg) 0;
+  }
+
+  .footer-grid .col .socials-links {
+    gap: 10px;
+  }
 }
