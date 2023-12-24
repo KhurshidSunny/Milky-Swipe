@@ -2,7 +2,7 @@
   --primary-color: #186ebe;
   --secondary-color: rgb(12, 172, 234);
   --color-white: #fff;
-  --color-light: #f7f9fc;
+  --color-light: #d4d4d4;
   --color-grey: #adbdcc;
   --text-dark: #000;
   --text-semi-dark: #727272;
@@ -155,9 +155,13 @@ button {
   box-sizing: border-box;
 }
 
-.card-container .card img {
+.card .card-image {
   width: 330px;
-  height: 200px;
+  height: 220px;
+}
+
+.card-container .card .card-image img {
+  width: 100%;
 }
 
 .card-container .card h3 {
@@ -253,6 +257,7 @@ button {
 /* HERO SECTION STYLES */
 .hero-section {
   width: 100%;
+  position: relative;
 }
 
 .hero-section .hero {
@@ -294,6 +299,37 @@ button {
   outline: none;
 }
 
+/* HERO SECTION DROP MENU STYLES */
+.drop-menu {
+  width: 280px;
+  background-color: var(--color-light);
+  position: absolute;
+  top: 0;
+  left: 50%;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: var(--space-lg) var(--space-xl) var(--space-lg) var(--space-lg);
+}
+
+.options a {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--text-dark);
+  transition: all 0.4s ease;
+}
+
+.options a:hover {
+  color: var(--color-white);
+  border-color: var(--color-white);
+}
+
 /* GRAPHIC SECTION */
 .graphic-section {
   width: 100%;
@@ -325,29 +361,41 @@ button {
   margin: var(--space-lg) 0;
   position: relative;
 }
-.production-section .production-image {
-  transition: all 0.2s ease-in;
+.production-section .card .card-image {
   position: relative;
 }
 
-.production-section .production-image::before {
+.production-section .card .card-image img {
+  transition: all 0.3s ease-in;
+}
+
+.production-section .card .card-image::before {
   content: "\f0c1";
   font-family: "Font Awesome 5 Free";
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 600;
   color: var(--secondary-color);
   position: absolute;
   background-color: var(--color-white);
   padding: var(--space-sm);
   border-radius: 50%;
-  top: 22%;
+  transition: all 0.2s ease-in;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: none;
+  z-index: 1;
 }
-.production-section .production-image:hover::before {
+
+.production-section .card .card-image:hover img {
   filter: brightness(60%);
-  display: block;
-  z-index: 2;
   cursor: pointer;
+}
+
+.production-section .card .card-image:hover::before {
+  display: block;
+  cursor: pointer;
+  background-color: var(--color-white);
 }
 
 /* PRODUCTS SECTION */
@@ -550,8 +598,31 @@ button {
   font-size: 20px;
   color: var(--color-white);
   transition: all 1s ease-in-out;
+  position: relative;
+}
+
+.copyright span::before {
+  content: "Scroll to top";
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  width: 75px;
+  height: 20px;
+  padding: 1px 0;
+  background-color: var(--text-dark);
+  border: 1px solid var(--color-white);
+  transition: opacity 0.4s ease;
+  top: -30px;
+  left: -20px;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .copyright span:hover {
   background-color: rgb(209, 209, 71);
+  cursor: pointer;
+}
+
+.copyright span:hover::before {
+  opacity: 1;
 }
