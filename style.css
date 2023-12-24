@@ -300,12 +300,24 @@ button {
 }
 
 /* HERO SECTION DROP MENU STYLES */
+
+@keyframes slideFromBottom {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .drop-menu {
   width: 280px;
   background-color: var(--color-light);
   position: absolute;
+  transform: translateY(100%);
+  animation: slideFromBottom 1s ease forwards;
   top: 0;
   left: 50%;
+  display: none;
 }
 
 .options {
@@ -328,6 +340,29 @@ button {
 .options a:hover {
   color: var(--color-white);
   border-color: var(--color-white);
+}
+
+#compnay {
+  top: -10px;
+  left: 220px;
+}
+
+#production {
+  top: -10px;
+  left: 335px;
+}
+#products {
+  top: -10px;
+  left: 450px;
+}
+
+#career {
+  top: -10px;
+  left: 740px;
+}
+
+.display-drop-menu {
+  display: block;
 }
 
 /* GRAPHIC SECTION */
