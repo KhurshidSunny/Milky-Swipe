@@ -212,11 +212,13 @@ button {
 }
 .two-columns-grid .grid-right button {
   margin: var(--space-lg) 0 0 0;
+  transition: all 0.3s ease;
 }
 
 /* MAIN */
 .main {
   width: 100%;
+  position: relative;
 }
 
 /* NAVBAR STYLES */
@@ -251,10 +253,26 @@ button {
   font-weight: 500;
 }
 
+#lang {
+  display: none;
+}
+
+#menu-button {
+  display: none;
+}
+
+/* BREAKPOINT NAVBAR */
+
+.breakpoint-navbar {
+  display: none;
+}
+
 /* HERO SECTION STYLES */
 .hero-section {
   width: 100%;
   position: relative;
+  background-image: url("assests/background1.webp");
+  background-size: cover;
 }
 
 .hero-section .hero {
@@ -262,7 +280,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("assests/background1.webp");
+
   height: 800px;
 }
 
@@ -358,10 +376,6 @@ button {
   left: 740px;
 }
 
-.display-drop-menu {
-  display: block;
-}
-
 /* GRAPHIC SECTION */
 .graphic-section {
   width: 100%;
@@ -436,7 +450,7 @@ button {
 }
 
 .card-container .card button {
-  transition: button 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .production-section .card-container .card button:hover {
@@ -454,6 +468,10 @@ button {
 }
 .two-columns {
   margin: calc(var(--space-xl) + 20px) 0 0 0;
+}
+.about-us-section .two-columns .grid-right button:hover {
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 /* PRODUCTS SECTION */
 .products-section {
@@ -688,6 +706,12 @@ button {
 /* BREAKPOINTS */
 
 @media only screen and (max-width: 1160px) {
+  /* NAVBAR STYLES */
+
+  .navbar .menu {
+    width: 75%;
+  }
+
   /* SCIENTIFIC SECTION */
   .scientific-grid .col-left img {
     width: 360px;
@@ -701,6 +725,61 @@ button {
 
   .scientific-grid .col-right h2 {
     margin: var(--space-lg) 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navbar .menu {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #lang {
+    display: block;
+    padding: var(--space-sm);
+    background-color: var(--secondary-color);
+    color: var(--color-white);
+    border: none;
+    margin: 0 var(--space-lg) 0 0;
+  }
+
+  #menu-button {
+    display: block;
+    font-size: 40px;
+    margin: 0 0 0 var(--space-lg);
+  }
+
+  /* breakpoint navbar */
+  .breakpoint-navbar {
+    display: block;
+    width: 300px;
+    background-color: var(--color-grey);
+    padding: var(--space-md) var(--space-sm);
+    position: absolute;
+    top: 95px;
+    left: 0;
+    z-index: 1;
+    transition: all 1s ease;
+  }
+
+  .breakpoint-navbar .breakpoint-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .breakpoint-navbar .breakpoint-menu li {
+    list-style-type: none;
+  }
+  .display-side-menu {
+    position: absolute;
+    left: -330px;
+    transition: all 1s ease;
   }
 }
 
@@ -745,10 +824,6 @@ button {
     --h3-font-size: 28px;
     --h4-font-size: 24px;
     --h5-font-size: 16px;
-  }
-
-  /* NAVBAR STYLES */
-  .navbar {
   }
 
   /* GRAPHIC SECTION */
@@ -838,9 +913,11 @@ button {
     width: 100%;
   }
 
-  /* .products-section button {
-    margin: var(--space-md) 0;
-  } */
+  /* ABOUT US SECTION */
+
+  .two-columns .two-columns-grid .grid-right {
+    padding: calc(var(--space-xl) + 20px) var(--space-md);
+  }
 
   /* SCIENTIFIC SECTION */
   .scientific-grid {
@@ -860,14 +937,21 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-height: 450px;
   }
 
   .scientific-grid .col-right h2 {
     margin: 0;
     text-align: center;
   }
+
+  .scientific-grid .col-right p {
+    margin: var(--space-md) 0 var(--space-sm) 0;
+  }
+
   .scientific-grid .col-left img {
-    width: 180px;
+    width: 150px;
+    margin: 0 0 var(--space-md) 0;
   }
 
   .scientific-grid .col-right button {
@@ -878,22 +962,33 @@ button {
 
   .footer {
     width: 100%;
-    height: 800px;
-    max-height: 900px;
+    height: 960px;
+    max-height: 1000px;
     background-color: #231f20;
   }
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .footer-grid .col:nth-child(1) {
-    grid-column: 1 / -1;
-    justify-self: center;
-    align-self: center;
-    margin: 0 0 var(--space-lg) 0;
+    grid-template-columns: 1fr;
   }
 
   .footer-grid .col .socials-links {
     gap: 10px;
+    width: 20%;
+    margin: 0 0 var(--space-md) 0;
   }
+
+  .copyright {
+    padding: var(--space-lg) 0;
+  }
+
+  .copyright p {
+    width: 100%;
+    margin: 0 var(--space-md) 0 var(--space-md);
+  }
+}
+
+.html,
+body {
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
